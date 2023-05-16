@@ -41,7 +41,7 @@ body {
 }
 
 .container__content {
-    width: 40%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
