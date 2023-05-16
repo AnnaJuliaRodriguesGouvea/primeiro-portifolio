@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --primaria: #245953;
+    --secundaria: #D8D8D8;
+    --terciaria: #E49393;
+    --cor-hover: #408E91;
+    --font-krona: 'Krona One', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+}
+
+body {
+    /* height: 100vh; faz o conteúdo ficar em 100% da tela */
+    box-sizing: border-box; /*nao permite os elementos filhos sair do elemento pai*/
+    background-color: var(--primaria);
+    color: var(--secundaria);
+}
+
+.header {
+    padding: 2% 0% 0% 15%;    
+}
+
+.header__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu_link {
+    color:var(--terciaria);
+    font-size: 1.5rem;
+    font-family: var(--font-montserrat);
+    font-weight: 600;
+    text-decoration: none;
+}
+.container {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center; /*alinha os itens no alinhamento do maior item*/
+    justify-content: space-between;  /*cria um espaço entre os elementos filhos alinhados*/
+    gap: 82px;
+}
+
+.container__content {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.container__content__title {
+    font-size: 2rem;
+    font-family: var(--font-krona);
+}
+
+.titulo-destaque {
+    color: var(--terciaria);
+}
+
+.container__content__text {
+    font-size: 1.25rem;
+    font-family: var(--font-montserrat);
+}
+
+.container__content__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.container__content__buttons_subtitulo {
+    font-size: 1.15rem;
+    font-family: var(--font-krona);
+    font-weight: 400;
+}
+
+.container__content__buttons__button {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--terciaria); /*tamanho da borda, tipo da borda, cor da borda*/
+    border-radius: 6px;
+    width: 50%;
+    padding: 15px 15px;
+    text-decoration: none;
+    color: var(--secundaria);
+    font-size: 1.5rem;
+    font-family: var(--font-montserrat);
+    font-weight: 600;
+}
+
+.container__content__buttons__button:hover {
+    background-color: var(--cor-hover);
+}
+
+.container__image {
+    width: 40%;
+}
+
+.footer {
+    color: var(--primaria);
+    background-color: var(--terciaria);
+    padding: 24px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+}
+
+/*Faz com que quando a tela tiver no maximo 1200px ele coloca os design abaixo*/
+@media (max-width: 1200px) {
+    .header {
+        padding: 10%;    
+    }
+
+    .header__menu {
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        padding: 8%;
+    }
+
+    .container__content {
+        width: 100%;
+    }
+}
